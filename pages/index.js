@@ -18,6 +18,8 @@ export async function getStaticProps() {
 // SSG 인데 외부에서 데이터를 받아오는 버전
 // export async function getStaticProps() {
 //   // 여기서는 경로를 상대 경로를 쓸 수 없음
+//   이건 테스트용이고, 본래 요청하는 코드는 client side에만 둔다.
+//   그리고 이 코드는 client side에 없으므로 이렇게 fetch 하면 안된다(지양한다).
 //   const response = await fetch('https://github.com/vercel/next.js/issues/44062')
 //   // const json = await response.json()
 
