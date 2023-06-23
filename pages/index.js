@@ -61,11 +61,22 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>항상 발전하고, 성장하고자 하는 개발자 홍용기 입니다.</p>
+        <ul>
+          <li>📧 E-mail: calmmne@naver.com</li>
+          <li>
+            💾 Github: <a href="https://github.com/0715yk">0715yk</a>
+          </li>
+          <li>
+            🏠 Blog: <a href="https://velog.io/@0715yk">velog</a>
+          </li>
+          <li>
+            🖼이력서 : &nbsp;
+            <a href="https://www.notion.so/937ab5b22e934c59893d97fa6e7e5189?pvs=4">
+              resume
+            </a>
+          </li>
+        </ul>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
