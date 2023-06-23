@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 export async function getStaticPaths() {
   return {
     paths: getAllPostIds(),
-    fallback: false,
+    fallback: true,
     // 빌드시에 생성되지 않은 페이지에 대한 처리를 하는 옵션
     // false : 처리하지 않는다. 404 에러
     // true : callback 동작으로 loader를 보여줬다가 데이터가 있다면 그 때 그리겠다.
