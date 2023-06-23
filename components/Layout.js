@@ -9,13 +9,17 @@ const name = 'Yongki Hong'
 export const siteTitle = 'Yongkis TECH BLOG'
 
 export default function Layout({ children, home }) {
-  const [theme, setTheme] = useState(() =>
-    typeof window !== 'undefined'
-      ? localStorage.getItem('theme') === 'dark'
-        ? 'dark'
-        : 'light'
-      : 'light'
-  )
+  const [theme, setTheme] = useState('light')
+
+  useEffect(() => {
+    const theme = localStorage.getItem('theme')
+    if (theme === 'dark') {
+      setTheme('dark')
+    } else {
+      document.querySelector('body').classList.remove('dark')
+      setTheme('light')
+    }
+  }, [])
 
   useEffect(() => {
     if (theme === 'dark') {
