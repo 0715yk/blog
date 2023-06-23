@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+.profile {
+  width: 20rem;
+  height: 25rem;
+  object-fit: contain;
+}
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -32,7 +37,6 @@
 .description {
   text-align: center;
 }
-
 
 .description {
   line-height: 1.5;
