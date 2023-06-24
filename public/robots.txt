@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yongkis-blog.vercel.app/
+
+# Sitemaps
+Sitemap: https://yongkis-blog.vercel.app/sitemap.xml

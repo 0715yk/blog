@@ -65,7 +65,7 @@ export default function Home({ allPostsData }) {
         <ul>
           <li>📧 E-mail: calmmne@naver.com</li>
           <li>
-            💾 Github: <a href="https://github.com/0715yk">0715yk</a>
+            💾&nbsp;Github: <a href="https://github.com/0715yk">0715yk</a>
           </li>
           <li>
             🏠 Blog: <a href="https://velog.io/@0715yk">velog</a>

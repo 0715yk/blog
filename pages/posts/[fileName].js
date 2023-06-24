@@ -4,6 +4,8 @@ import Layout from '../../components/Layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
 import { useRouter } from 'next/router'
+import { MDXRemote } from 'next-mdx-remote'
+import CodeBlock from '../../components/CodeBlock'
 
 export async function getStaticPaths() {
   return {
@@ -26,6 +28,18 @@ export async function getStaticProps({ params }) {
   }
 }
 
+const Button = ({ children }) => {
+  return (
+    <button
+      className="px-10 dark:bg-white dark:text-teal-700 bg-black text-lg text-teal-200 rounded-lg"
+      onClick={() => alert(`thanks to ${children}`)}
+    >
+      {children}
+    </button>
+  )
+}
+const components = { Button, CodeBlock }
+
 export default function Post({ postData }) {
   const router = useRouter()
 
@@ -43,7 +57,12 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        {postData.contentHtml && (
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        )}
+        {postData.mdxSource && (
+          <MDXRemote {...postData.mdxSource} components={components} />
+        )}
       </article>
     </Layout>
   )
